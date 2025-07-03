@@ -38,3 +38,31 @@
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
 }
+
+/* PROGRESS BAR */
+/* ProgressBar Styles */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #0044ad; /* customize color */
+  transition: width 0.2s ease-out;
+  box-shadow: 0 0 10px #0044ad, 0 0 5px #0044ad;
+  border-radius: 1px;
+}
+.progress-bar {
+  opacity: 1;
+  transition: width 0.2s ease-out, opacity 0.3s ease;
+}
+
+.progress-wrapper:not(:has(.progress-bar)) .progress-bar {
+  opacity: 0;
+}
